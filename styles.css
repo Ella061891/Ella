@@ -1,0 +1,98 @@
+html{
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('image/背景.png'); /* 背景圖片 */
+  background-size: 100% 100%;
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container {
+  max-width:auto;
+  max-height: 800px;
+  margin: 0 auto;
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  padding:0px;
+}
+
+header {
+  text-align: center;
+  background-image: url('image/頁首.png');
+  background-size: 100% 100%;
+
+}
+header img {
+  display:block;
+  margin:auto;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #FF6953;
+  padding: 55px;
+  text-shadow: #457D58;
+  -webkit-text-stroke: 1px #000;
+  font-weight:bold ;
+  font-size: 35px;
+}
+
+header img{
+  position: absolute;
+  top: 10%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main {
+  padding: 20px;
+}
+.button-container {
+  text-align: center; /* 將按鈕居中顯示 */
+}
+
+.button-a {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-a button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #1212122d;
+  color: #121212;
+  border-radius: 4px;
+  font-size: 24px;
+  cursor: pointer;
+  width: 150px;
+  /* opacity: 0.2; 設定背景的透明度為 20% */
+}
+
+.button-container button {
+  margin: 5px; /* 設定按鈕之間的間距 */
+  padding: 1px 1px; /* 設定按鈕的內邊距（上下 1px，左右 1px） */
+  border: none; /* 移除按鈕的框線 */
+  background-color: #457D58; /* 設定按鈕的背景顏色 */
+  color: #fff; /* 設定按鈕的文字顏色 */
+  border-radius: 8px; /* 設定按鈕的圓角半徑 */
+  font-size: 24px; /* 設定按鈕文字的字體大小 */
+  cursor: pointer; /* 設定鼠標懸停時的指標樣式 */
+  width: 150px;
+  height: 200px;
+}
+.button-container button img {
+  width: 50%; /* 設定圖片寬度為原始寬度的 50% */
+}
+
+footer {
+  text-align: center;
+  background-color: #457D58;
+  color: #CBDDD1;
+  height: 140px;
+}
