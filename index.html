@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>飛牛牧場</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>飛牛牧場　智慧設備</h1>
+      </div>
+    </header>
+    <main class="main-wrapper">
+      <div class="button-a">
+        <button onclick="goToPage('#')">主控站1</button>
+        <button onclick="goToPage('#')">主控站2</button>
+      </div>
+      <div class="button-container">
+        <button onclick="goToPage('#')"><img src="image/icon/風速.png"><br>風速</button>
+        <button onclick="goToPage('#')"><img src="image/icon/風向.png"><br>風向</button>
+        <button onclick="goToPage('#')"><img src="image/icon/溫度.png"><br>溫度</button>
+        <button onclick="goToPage('#')"><img src="image/icon/濕度.png"><br>濕度</button><br>
+        <button onclick="goToPage('#')"><img src="image/icon/雨量.png"><br>雨量</button>
+        <button onclick="goToPage('#')"><img src="image/icon/PM2.5.png"><br>PM2.5</button>
+        <button onclick="goToPage('#')"><img src="image/icon/攝影機.png"><br>攝影機</button>
+      </div>
+      <div class="sidebar">
+        <div id="sidemenu">
+          <a href="#"><img src="image/icon/1.png" alt="" width="40" height="40" class="transition" /></a>
+          <a href="#"><img src="image/icon/風向.png" alt="" width="40" height="40" class="transition" /></a>
+          <a href="#"><img src="image/icon/3.png" alt="" width="40" height="40" class="transition" /></a>
+          <a href="#"><img src="image/icon/濕度.png" alt="" width="40" height="40" class="transition" /></a>
+          <a href="#"><img src="image/icon/5.png" alt="" width="40" height="40" class="transition" /></a>
+          <a href="#"><img src="image/icon/PM2.5.png" alt="" width="40" height="40" class="transition" /></a>
+          <a href="#"><img src="image/icon/7.png" alt="" width="40" height="40" class="transition" /></a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="charts">
+          <div class="content">
+            <div id="chart1" class="chart-wrapper">
+              <div class="chart-section">
+                <div class="chart-icon">
+                  <i class="fas fa-wind"></i>
+                </div>
+                <h2>風速</h2>
+                <canvas id="lineChart1" width="400" height="200"></canvas>
+              </div>
+            </div>
+            <div id="chart2" class="chart-wrapper">
+              <div class="chart-section">
+                <div class="chart-icon">
+                  <i class="fas fa-compass"></i>
+                </div>
+                <h2>風向</h2>
+                <canvas id="lineChart2" width="400" height="200"></canvas>
+              </div>
+            </div>
+            <div class="progress-section">
+              <h2>進度環 1</h2>
+              <div class="progress-ring" id="progressRing1">
+                <div class="progress-circle" id="progressCircle1"></div>
+                <span class="percentage" id="percentage1">0%</span>
+                <span class="progress-timer" id="progressTimer1">00:00</span>
+              </div>
+            </div>
+            <div class="progress-section">
+              <h2>進度環 2</h2>
+              <div class="progress-ring" id="progressRing2">
+                <div class="progress-circle" id="progressCircle2"></div>
+                <span class="percentage" id="percentage2">0%</span>
+                <span class="progress-timer" id="progressTimer2">00:00</span>
+              </div>
+            </div>
+            <div class="progress-section">
+              <h2>進度環 3</h2>
+              <div class="progress-ring" id="progressRing3">
+                <div class="progress-circle" id="progressCircle3"></div>
+                <span class="percentage" id="percentage3">0%</span>
+                <span class="progress-timer" id="progressTimer3">00:00</span>
+              </div>
+            </div>
+            <div id="chart3" class="chart-wrapper">
+              <div class="chart-section">
+                <div class="chart-icon">
+                  <i class="fas fa-thermometer-half"></i>
+                </div>
+                <h2>溫度</h2>
+                <canvas id="lineChart3" width="400" height="200"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>仲闐科技股份有限公司</p>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

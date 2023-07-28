@@ -1,0 +1,261 @@
+/* CSS 部分 */
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('image/背景.png'); /* 背景圖片 */
+  background-size: 100% 100%;
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container {
+  max-width: auto;
+  max-height: 800px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+header {
+  text-align: center;
+  background-image: url('image/頁首.png');
+  background-size: 100% 100%;
+}
+
+header img {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #FF6953;
+  padding: 55px;
+  text-shadow: #457D58;
+  -webkit-text-stroke: 1px #000;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+header img {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main {
+  padding: 20px;
+}
+
+.button-container {
+  text-align: center; /* 將按鈕居中顯示 */
+}
+
+.button-a {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-a button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #1212122d;
+  color: #121212;
+  border-radius: 4px;
+  font-size: 24px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.button-container button {
+  margin: 5px; /* 設定按鈕之間的間距 */
+  padding: 1px 1px; /* 設定按鈕的內邊距（上下 1px，左右 1px） */
+  border: none; /* 移除按鈕的框線 */
+  background-color: #457D58; /* 設定按鈕的背景顏色 */
+  color: #fff; /* 設定按鈕的文字顏色 */
+  border-radius: 8px; /* 設定按鈕的圓角半徑 */
+  font-size: 24px; /* 設定按鈕文字的字體大小 */
+  cursor: pointer; /* 設定鼠標懸停時的指標樣式 */
+  width: 150px;
+  height: 200px;
+}
+
+.button-container button img {
+  width: 50%; /* 設定圖片寬度為原始寬度的 50% */
+}
+
+.charts {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chart-section {
+  text-align: center;
+}
+
+.chart-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.progress-section {
+  text-align: center;
+}
+
+.progress-ring {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #121212;
+  overflow: hidden;
+}
+
+.progress-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 100px, 100px, 50px);
+  border-radius: 50%;
+  background-color: #457D58;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 18px;
+}
+
+/* 側邊選單的樣式 */
+.sidebar {
+  width: 40px;
+  height: 100%;
+  background-color: #CBDDD1;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none; /* 移除外框 */
+}
+
+
+/* 主內容的樣式 */
+.content {
+  margin-left: 50px; /* 將主內容向右移動，保持與側邊選單的寬度一致 */
+  padding: 20px;
+}
+
+/* 折線圖和進度環的樣式，這裡只是舉例，請根據實際情況進行修改 */
+.chart-section,
+.progress-section {
+  margin-bottom: 20px;
+  /*background-color: #f9f9f9;*/
+  padding: 20px;
+}
+
+/* 最上方按鈕的樣式 
+.button-a {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}*/
+
+/* 側邊選單圖標的樣式 */
+
+#sidemenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+  border: none; /* 移除外框 */
+}
+
+#sidemenu a {
+  margin-bottom: 10px;
+  display: block;
+  color: #666;
+}
+
+#sidemenu a:hover {
+  color: #000;
+}
+
+/* #sidemenu img {
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  padding: 5px;
+} */
+
+/* 風速、風向等圖標樣式 */
+.chart-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+/* 標題樣式 */
+h2 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* 進度環樣式 */
+.progress-ring {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 8px solid #f1f1f1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 8px solid #2196F3;
+  border-radius: 50%;
+  clip: rect(0, 50px, 100px, 0);
+}
+
+.percentage {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* 設定 canvas 為 100% 寬度 */
+canvas {
+  width: 100% !important;
+  max-width: 400px;
+}
+
+
+
+footer {
+  text-align: center;
+  background-color: #457D58;
+  color: #CBDDD1;
+  height: 140px;
+}
