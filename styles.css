@@ -1,9 +1,11 @@
 /* CSS 部分 */
 
+/* 將 HTML 的高度設定為 100% */
 html {
   height: 100%;
 }
 
+/* 對 body 進行重置，設定背景圖片和字型 */
 body {
   margin: 0;
   padding: 0;
@@ -15,6 +17,7 @@ body {
   background-position: center;
 }
 
+/* 設定容器的最大寬度，並將其置中 */
 .container {
   max-width: auto;
   max-height: 800px;
@@ -22,6 +25,7 @@ body {
   padding: 0px;
 }
 
+/* 頁首區塊的樣式 */
 header {
   text-align: center;
   background-image: url('image/頁首.png');
@@ -44,6 +48,7 @@ header h1 {
   font-size: 35px;
 }
 
+/* 將頁首圖片置中 */
 header img {
   position: absolute;
   top: 10%;
@@ -55,15 +60,18 @@ main {
   padding: 20px;
 }
 
+/* 中央對齊按鈕容器內的按鈕 */
 .button-container {
-  text-align: center; /* 將按鈕居中顯示 */
+  text-align: center;
 }
 
+/* 按鈕區塊 A */
 .button-a {
   text-align: center;
   margin-bottom: 20px;
 }
 
+/* 按鈕區塊 A 內的按鈕 */
 .button-a button {
   margin: 5px;
   padding: 10px 20px;
@@ -76,41 +84,52 @@ main {
   width: 150px;
 }
 
+/* 按鈕容器內的按鈕 */
 .button-container button {
-  margin: 5px; /* 設定按鈕之間的間距 */
-  padding: 1px 1px; /* 設定按鈕的內邊距（上下 1px，左右 1px） */
-  border: none; /* 移除按鈕的框線 */
-  background-color: #457D58; /* 設定按鈕的背景顏色 */
-  color: #fff; /* 設定按鈕的文字顏色 */
-  border-radius: 8px; /* 設定按鈕的圓角半徑 */
-  font-size: 24px; /* 設定按鈕文字的字體大小 */
-  cursor: pointer; /* 設定鼠標懸停時的指標樣式 */
+  margin: 5px;
+  padding: 1px 1px;
+  border: none;
+  background-color: #457D58;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 24px;
+  cursor: pointer;
   width: 150px;
   height: 200px;
 }
 
+/* 設定按鈕內圖片的大小 */
 .button-container button img {
-  width: 50%; /* 設定圖片寬度為原始寬度的 50% */
+  width: 50%;
 }
 
+/* 折線圖 */
 .charts {
   display: flex;
   justify-content: space-around;
 }
 
+/* 折線圖容器內的部分 */
 .chart-section {
-  text-align: center;
+  text-align: left; /* 折線圖文字靠左對齊 */
+  color: #000; /* 設定折線圖文字顏色為黑色 */
 }
 
-.chart-icon {
-  font-size: 48px;
-  margin-bottom: 10px;
+/* 折線圖圖示的樣式 */
+
+.chart-icon img {
+  width: 8%;
+  height: 8%;
+  float:left;
 }
 
+
+/* 進度環部分的樣式 */
 .progress-section {
-  text-align: center;
+  text-align: left; /* 進度環文字靠左對齊 */
 }
 
+/* 進度環的樣式 */
 .progress-ring {
   position: relative;
   width: 100px;
@@ -118,8 +137,10 @@ main {
   border-radius: 50%;
   background-color: #121212;
   overflow: hidden;
+  
 }
 
+/* 進度圓的樣式 */
 .progress-circle {
   position: absolute;
   width: 100%;
@@ -129,6 +150,7 @@ main {
   background-color: #457D58;
 }
 
+/* 進度百分比文字的樣式 */
 .percentage {
   position: absolute;
   top: 50%;
@@ -150,17 +172,16 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: none; /* 移除外框 */
+  border: none;
 }
-
 
 /* 主內容的樣式 */
 .content {
-  margin-left: 50px; /* 將主內容向右移動，保持與側邊選單的寬度一致 */
+  margin-left: 50px;
   padding: 20px;
 }
 
-/* 折線圖和進度環的樣式，這裡只是舉例，請根據實際情況進行修改 */
+/* 折線圖和進度環的部分 */
 .chart-section,
 .progress-section {
   margin-bottom: 20px;
@@ -168,57 +189,122 @@ main {
   padding: 20px;
 }
 
-/* 最上方按鈕的樣式 
-.button-a {
+/* 如果要固定上方按鈕的位置，解除下面這段註解 */
+/*.button-a {
   position: fixed;
   top: 20px;
   right: 20px;
 }*/
 
-/* 側邊選單圖標的樣式 */
-
+/* 側邊選單圖示的樣式 */
 #sidemenu {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   flex-grow: 1;
-  border: none; /* 移除外框 */
+  border: none;
 }
 
 #sidemenu a {
   margin-bottom: 10px;
   display: block;
   color: #666;
+  position: relative; 
 }
 
-#sidemenu a:hover {
+
+/* 滑鼠懸停時更換圖示底圖 */
+#sidemenu a:hover::before {
+  background-color: #457D58;
+}
+
+:root {
+  --img-1: url('image/icon/11.png');
+  --img-2: url('image/icon/22.png');
+  --img-3: url('image/icon/33.png');
+  --img-4: url('image/icon/44.png');
+  --img-5: url('image/icon/55.png');
+  --img-6: url('image/icon/66.png');
+  --img-7: url('image/icon/77.png');
+
+  /* 添加更多的圖片變數*/
+}
+
+/* 側邊選單圖示添加邊框和填充 */
+#sidemenu img {
+  /*border: 1px solid #457D58;*/
+  padding: 5px;
+  width: 40px; /* 設定圖片的寬度 */
+  height: 40px; /* 設定圖片的高度 */
+  transition: background-color 0.3s; /* 添加過渡效果 */
+}
+
+/* 滑鼠移到側邊選單圖示時的樣式變化 */
+#sidemenu a:hover img {
+  background-color: #457D58; /* 滑鼠移到圖示時的底圖顏色變化 */
+}
+
+/* 滑鼠移到側邊選單圖示時更改圖片 */
+#sidemenu a:hover img#icon1 {
+  content: var(--img-1); /* 將滑鼠懸停時的圖片路徑應用到對應的圖示上 */
+}
+
+#sidemenu a:hover img#icon2 {
+  content: var(--img-2);
+}
+
+#sidemenu a:hover img#icon3 {
+  content: var(--img-3);
+}
+
+#sidemenu a:hover img#icon4 {
+  content: var(--img-4);
+}
+
+#sidemenu a:hover img#icon5 {
+  content: var(--img-5);
+}
+
+#sidemenu a:hover img#icon6 {
+  content: var(--img-6);
+}
+
+#sidemenu a:hover img#icon7 {
+  content: var(--img-7);
+}
+
+/* 滑鼠移到側邊選單圖示時更改按鈕的底圖顏色 */
+#sidemenu a:hover img {
+  background-color: #457D58; /* 更改按鈕的底圖顏色 */
+  border-color: #457D58; /* 更改邊框的顏色 */
+  color: #fff; /* 更改圖示的顏色 */
+}
+
+/* 折線圖圖示 (例如：風速、風向) 的樣式 */
+.chart-icon {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 10px;
   color: #000;
 }
 
-/* #sidemenu img {
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  padding: 5px;
-} */
-
-/* 風速、風向等圖標樣式 */
-.chart-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #666;
+.chart-icon img{
+  border: 1px solid #666;
+  background-color: #457D58;
 }
 
-/* 標題樣式 */
+/* 部分標題 (例如：風速、風向) 的樣式 */
 h2 {
   margin-bottom: 10px;
-  color: #444;
+  color: #000;
+  /*border: 1px solid #000;
+  background-color: #F6F6E9;*/
 }
 
-/* 進度環樣式 */
+/* 進度環的樣式 */
 .progress-ring {
   position: relative;
   width: 80px;
@@ -230,6 +316,7 @@ h2 {
   align-items: center;
 }
 
+/* 進度圓的樣式 */
 .progress-circle {
   position: absolute;
   width: 100%;
@@ -239,20 +326,33 @@ h2 {
   clip: rect(0, 50px, 100px, 0);
 }
 
+/* 側邊選單和進度環內部百分比文字的樣式 */
 .percentage {
   font-size: 16px;
   font-weight: bold;
   color: #444;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  height: 600px; /* 設定高度 */
 }
 
-/* 設定 canvas 為 100% 寬度 */
+/* 設定折線圖容器內 canvas 的寬度 */
 canvas {
   width: 100% !important;
-  max-width: 400px;
+  /*max-width: 400px;*//* 設定每個折線圖的最大寬度 */
+  min-width: 800px; /* 設定每個折線圖的最小寬度 */
 }
 
+.camera{
+  max-width: 50%;
+  height: 80%;
+}
 
-
+/* 頁尾區塊的樣式 */
 footer {
   text-align: center;
   background-color: #457D58;
