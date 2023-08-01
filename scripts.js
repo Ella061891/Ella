@@ -96,6 +96,24 @@ updateProgress('progressRing2', 'percentage2', progress2);
 updateProgress('progressRing3', 'percentage3', progress3);
 */
 
+function goToPage(pageId) {
+    // 這裡可以寫導向其他頁面的程式碼
+    console.log('Go to page: ' + pageId);
+  
+    // 隱藏當前顯示的折線圖頁面
+    document.querySelector(currentPage).style.display = 'none';
+  
+    // 顯示目標折線圖頁面
+    document.querySelector(pageId).style.display = 'block';
+  
+    // 更新當前顯示的折線圖頁面
+    currentPage = pageId;
+  
+    // 使用 fullPage.js 的 moveTo 函數滾動到指定的錨點
+    $.fn.fullpage.moveTo(pageId);
+  }
+  
+
 
 // 更新進度環的百分比
 function updateProgress(percentage, elementId) {
@@ -121,20 +139,81 @@ function simulateProgressUpdate(percentage, elementId) {
   simulateProgressUpdate(75, 'progressRing2');
   simulateProgressUpdate(30, 'progressRing3');
 
+  $(document).ready(function () {
+    // 初始化 fullPage.js
+    $('#fullpage').fullpage({
+      // 在此設定選項（如果有需要）
+      anchors: ['home', 'ws_1', 'wd_1', 'c_1', 'h_1', 'rf_1', 'pm_1', 'ca_1', 'footer'],
+      scrollingSpeed: 800,
+      navigation: true,
+      // 在進入每個頁面後切換類
+      afterLoad: function (origin, destination) {
+        if (destination.index === 0) {
+          $('body').removeClass('show-sidebar').addClass('hide-sidebar');
+        } else {
+          $('body').removeClass('hide-sidebar').addClass('show-sidebar');
+        }
+      },
+    });
+  
+    // 為連結到各區塊的按鈕添加平滑捲動效果
+    $('.button-container a').on('click', function (e) {
+      e.preventDefault();
+      var target = $(this).attr('href');
+      goToPage(target);
+    });
+  
+    function goToPage(anchor) {
+      $.fn.fullpage.moveTo(anchor);
+    }
+  });
+
+  
+  $(document).ready(function () {
+    // 初始化 fullPage.js
+    $('#fullpage').fullpage({
+      // 在此設定選項（如果有需要）
+      anchors: ['home', 'ws_1', 'wd_1', 'c_1', 'h_1', 'rf_1', 'pm_1', 'ca_1', 'footer'],
+      scrollingSpeed: 800,
+      navigation: true,
+      // 在進入每個頁面後切換類
+      afterLoad: function (origin, destination) {
+        if (destination.index === 0) {
+          $('body').removeClass('show-sidebar').addClass('hide-sidebar');
+        } else {
+          $('body').removeClass('hide-sidebar').addClass('show-sidebar');
+        }
+      },
+    });
+  
+    // 為連結到各區塊的按鈕添加平滑捲動效果
+    $('.button-container a').on('click', function (e) {
+      e.preventDefault();
+      var target = $(this).attr('href');
+      goToPage(target);
+    });
+  
+    function goToPage(anchor) {
+      $.fn.fullpage.moveTo(anchor);
+    }
+  });
+  
+
+
 
 // 新增一個全域變數來儲存當前顯示的折線圖頁面
 let currentPage = '#chart1';
 
-function goToPage(pageId) {
-    // 隱藏當前顯示的折線圖頁面
-    document.querySelector(currentPage).style.display = 'none';
+// function goToPage(pageId) {
+//     // 隱藏當前顯示的折線圖頁面
+//     document.querySelector(currentPage).style.display = 'none';
 
-    // 顯示目標折線圖頁面
-    document.querySelector(pageId).style.display = 'block';
+//     // 顯示目標折線圖頁面
+//     document.querySelector(pageId).style.display = 'block';
 
-    // 更新當前顯示的折線圖頁面
-    currentPage = pageId;
+//     // 更新當前顯示的折線圖頁面
+//     currentPage = pageId;
 
-    // 在這裡你可以根據需要更新圖片和底圖的顯示
-    // ...
-}
+//     // 在這裡你可以根據需要更新圖片和底圖的顯示
+//     // ...
+// }

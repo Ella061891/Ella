@@ -6,72 +6,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>飛牛牧場</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <div>
-        <h1>飛牛牧場　智慧設備</h1>
-      </div>
-    </header>
+  <header>
+    <div>
+      <h1>飛牛牧場　智慧設備</h1>
+    </div>
+  </header>
+  <div class="container" id="fullpage">
     <main class="main-wrapper">
-      <div class="button-a">
-        <button onclick="goToPage('#')">主控站1</button>
-        <button onclick="goToPage('#')">主控站2</button>
-      </div>
-      <div class="button-container">
-        <a href="#ws_1">
-          <button onclick="goToPage('#')">
-            <img src="image/icon/1.png" alt="風速">
-            <br>風速
-          </button>
-        </a>
-        <a href="#wd_1">
-          <button onclick="goToPage('#')">
-            <img src="image/icon/22.png" alt="風向">
-            <br>風向
-          </button>
-        </a>
-        <a href="#c_1">
-          <button onclick="goToPage('#')">
-            <img src="image/icon/3.png" alt="溫度">
-            <br>溫度
-          </button>
-        </a>
-        <a href="#h_1">
-          <button onclick="goToPage('#')">
-            <img src="image/icon/44.png" alt="濕度">
-            <br>濕度
-          </button>
-        </a><br>
-        <a href="#rf_1">
-          <button onclick="goToPage('#')">
-            <img src="image/icon/5.png" alt="雨量">
-            <br>雨量
-          </button>
-        </a>
-        <a href="#pm_1">
-          <button onclick="goToPage('#')">
-            <img src="image/icon/66.png" alt="PM2.5">
-            <br>PM2.5
-          </button>
-        </a>
-        <a href="#ca_1">
-          <button onclick="goToPage('#')">
-            <img src="image/icon/7.png" alt="攝影機">
-            <br>攝影機
-          </button>
-        </a>
+      <div class="section" data-anchor="home">
+        <div class="button-a">
+          <button onclick="goToPage('#')">主控站1</button>
+          <button onclick="goToPage('#')">主控站2</button>
+        </div>
+        <div class="button-container">
+          <a href="#ws_1">
+            <button onclick="goToPage('#ws_1')">
+              <img src="image/icon/1.png" alt="風速">
+              <br>風速
+            </button>
+          </a>
+          <a href="#wd_1">
+            <button onclick="goToPage('#wd_1')">
+              <img src="image/icon/22.png" alt="風向">
+              <br>風向
+            </button>
+          </a>
+          <a href="#c_1">
+            <button onclick="goToPage('#c_1')">
+              <img src="image/icon/3.png" alt="溫度">
+              <br>溫度
+            </button>
+          </a>
+          <a href="#h_1">
+            <button onclick="goToPage('#h_1')">
+              <img src="image/icon/44.png" alt="濕度">
+              <br>濕度
+            </button>
+          </a><br>
+          <a href="#rf_1">
+            <button onclick="goToPage('#rf_1')">
+              <img src="image/icon/5.png" alt="雨量">
+              <br>雨量
+            </button>
+          </a>
+          <a href="#pm_1">
+            <button onclick="goToPage('#pm_1')">
+              <img src="image/icon/66.png" alt="PM2.5">
+              <br>PM2.5
+            </button>
+          </a>
+          <a href="#ca_1">
+            <button onclick="goToPage('#ca_1')">
+              <img src="image/icon/7.png" alt="攝影機">
+              <br>攝影機
+            </button>
+          </a>
+        </div>
       </div>
       <div class="sidebar">
         <div id="sidemenu">
           <a href="#ws_1">
-            <img src="image/icon/1.png" alt="" width="40" height="40" class="transition"  id="icon1"/>
+            <img src="image/icon/1.png" alt="" width="40" height="40" class="transition" id="icon1" />
           </a>
           <a href="#wd_1">
-            <img src="image/icon/2.png" alt="" width="40" height="40" class="transition"  id="icon2"/>
+            <img src="image/icon/2.png" alt="" width="40" height="40" class="transition" id="icon2" />
           </a>
           <a href="#C_1">
             <img src="image/icon/3.png" alt="" width="40" height="40" class="transition" id="icon3" />
@@ -93,7 +96,7 @@
       <div class="content">
         <div class="charts">
           <div class="content">
-            <div id="chart1" class="chart-wrapper">
+            <div id="chart1" class="chart-wrapper section" data-anchor="section1">
               <div class="chart-section">
                 <div id="ws_1" class="chart-icon">
                   <img src="image/icon/11.png" alt="風速">
@@ -102,7 +105,7 @@
                 <canvas id="lineChart1" width="80%" height="50%"></canvas>
               </div>
             </div>
-            <div id="chart2" class="chart-wrapper">
+            <div id="chart2" class="chart-wrapper section" data-anchor="section2">
               <div id="wd_1" class="chart-section">
                 <div class="chart-icon">
                   <img src="image/icon/22.png" alt="風向">
@@ -111,7 +114,7 @@
                 <canvas id="lineChart2" width="800" height="400"></canvas>
               </div>
             </div>
-            <div class="progress-section">
+            <div class="progress-section section" data-anchor="section3">
               <div id="C_1" class="chart-icon">
                 <img src="image/icon/33.png" alt="溫度">
                 <h2>&emsp;溫度</h2>
@@ -122,7 +125,7 @@
                 <span class="progress-timer" id="progressTimer1">00:00</span>
               </div>
             </div>
-            <div class="progress-section">
+            <div class="progress-section section" data-anchor="section4">
               <div id="h_1" class="chart-icon">
                 <img src="image/icon/44.png" alt="濕度">
                 <h2>&emsp;濕度</h2>
@@ -133,7 +136,7 @@
                 <span class="progress-timer" id="progressTimer2">00:00</span>
               </div>
             </div>
-            <div class="progress-section">
+            <div class="progress-section section" data-anchor="section5">
               <div id="rf_1" class="chart-icon">
                 <img src="image/icon/55.png" alt="降雨量">
                 <h2>&emsp;降雨量</h2>
@@ -144,7 +147,7 @@
                 <span class="progress-timer" id="progressTimer3">00:00</span>
               </div>
             </div>
-            <div id="chart3" class="chart-wrapper">
+            <div id="chart3" class="chart-wrapper section" data-anchor="section6">
               <div class="chart-section">
                 <div id="pm_1" class="chart-icon">
                   <img src="image/icon/66.png" alt="PM2.5">
@@ -156,7 +159,8 @@
           </div>
         </div>
         <!-- 新增攝影機圖片區塊 -->
-        <div id="chart4" class="chart-wrapper">
+
+        <div id="chart4" class="chart-wrapper section" data-anchor="section7">
           <div class="chart-section">
             <div id="ca_1" class="chart-icon">
               <img src="image/icon/77.png" alt="攝影機">
@@ -167,13 +171,38 @@
               <img src="image/camera2.jpg" alt="攝影機_2">
             </div>
           </div>
+
         </div>
       </div>
     </main>
     <footer>
-      <p>仲闐科技股份有限公司</p>
+      <div class="container">
+        <div class="image-container">
+          <img src="image/logo_demeter_w.png" class="image2">
+          <img src="image/flycow.png" class="image2">
+  
+          <div>
+            <p class="p26">Contact Info</p>
+            <p class="p12">電話：(04)3706-2688</p>
+            <p class="p12">地址：台中市南屯區嶺東路1號</p>
+            <p class="p12">聖益樓7樓704室</p>
+          </div>
+  
+          <div>
+              <p class="p26">Navigation</p>
+              <p class="p12">首頁</p>
+              <p class="p12">主控站 1 </p>
+              <p class="p12">主控站 2</p>
+          </div>
+  
+        </div>
+      </div>
+      <p class="p8">Copyright © 2023 Demeter Technology Inc. All rights reserved.</p>
     </footer>
   </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="scripts.js"></script>
 </body>
